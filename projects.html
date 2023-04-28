@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Cleaver Dev Portfolio | Projects">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Jack Gardner | Cleaver Dev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaver Dev | Projects</title>
+    <script src="https://kit.fontawesome.com/39ebcef0ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.png">
+</head>
+<body>
+
+    <div class="projects">
+
+        <div class="title">
+            <span style="color:aqua">Projects</span>
+        </div>
+
+        <div class="name" style="font-size:25px; padding-top: 25px;">
+            <span style="color:pink">HTML, CSS & JS</span>
+        </div>
+
+        <div class="follow" style="font-size:20px; padding-top: 5px;">
+            <a href="https://github.com/JackGardnerDev/Blizzard-Simulator">Blizzard Simulator</a> | <a href="https://github.com/JackGardnerDev/Crusader">Crusader</a> | <a href="https://github.com/JackGardnerDev/Portfolio-Bootstrap">Other Portfolio</a>
+        </div>
+
+        <div class="name" style="font-size:25px; padding-top: 25px;">
+            <span style="color:pink">Bootstrap</span>
+        </div>
+
+        <div class="follow" style="font-size:20px; padding-top: 5px;">
+            <a href="https://github.com/JackGardnerDev/bsf_bolts">BSF Bolts</a> | <a href="https://github.com/JackGardnerDev/CleaverBlog">Cleaver Blog</a> | <a href="https://github.com/JackGardnerDev/Meta">Meta</a>
+        </div>
+
+        <div class="name" style="font-size:25px; padding-top: 25px;">
+            <span style="color:pink">Tailwind</span>
+        </div>
+
+        <div class="follow" style="font-size:20px; padding-top: 5px;">
+            Tailwind
+        </div>
+
+        <div class="name" style="font-size:25px; padding-top: 25px;">
+            <span style="color:pink">Pico</span>
+        </div>
+
+        <div class="follow" style="font-size:20px; padding-top: 5px;">
+            <a href="https://github.com/JackGardnerDev/Tanks">Tanks</a>
+        </div>
+
+        <div class="name" style="font-size:25px; padding-top: 25px;">
+            <span style="color:pink">React</span>
+        </div>
+
+        <div class="follow" style="font-size:20px; padding-top: 5px;">
+            React
+        </div>
+
+        <div class="name" style="font-size:25px; padding-top: 25px;">
+            <span style="color:pink">PHP & SQL</span>
+        </div>
+
+        <div class="follow" style="font-size:20px; padding-top: 5px;">
+            <a href="https://github.com/JackGardnerDev/Arkanine">Arkanine</a>
+        </div>
+
+    </div>
+
+    <!-- card -->
+
+    <div class="cards">
+
+        <div class="card-swiper">
+    
+            <div class="card-groups">
+              <div class="card-group" data-index="0" data-status="active">
+                <div class="little-card card">
+          
+                </div>
+                <div class="big-card card">
+          
+                </div>
+                <div class="little-card card">
+          
+                </div>
+                <div class="big-card card">
+          
+                </div>
+                <div class="little-card card">
+          
+                </div>
+                <div class="big-card card">
+          
+                </div>
+                <div class="little-card card">
+          
+                </div>
+                <div class="big-card card">
+          
+                </div>
+              </div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <!-- style -->
+
+    <style>
+
+    body {
+      background-color: #16161D;
+      margin: 0px;  
+      height: 100vh;
+      
+      display: grid;
+      place-items: center;
+    }
+    
+    .cards {
+        margin: 0;
+        position: absolute;
+        top: 20%;
+        left: 60%; 
+    }
+    
+    .card-groups,
+    .card-group,
+    .card {
+      aspect-ratio: 4 / 7;
+    }
+    
+    .card-groups,
+    .card-group,
+    .big-card {  
+      width: 30vmin;
+    }
+    
+    .card-group {
+      position: absolute;
+      transition: transform 400ms ease;
+    }
+    
+    .card-group[data-status="unknown"] {
+      transform: scale(0);
+      transition: none;
+    }
+    
+    .card-group[data-status="active"] {
+      transition-delay: 300ms;
+    }
+    
+    .card-group[data-status="after"] {
+      transform: translateX(50%) scale(0);
+    }
+    
+    .card-group[data-status="before"] {
+      transform: translateX(-50%) scale(0);
+    }
+    
+    .card-group[data-status="becoming-active-from-after"] {
+      transform: translateX(50%) scale(0);
+      transition: none;
+    }
+    
+    .card-group[data-status="becoming-active-from-before"] {
+      transform: translateX(-50%) scale(0);
+      transition: none;
+    }
+    
+    .card {
+      position: absolute;
+      transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
+      
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .big-card {
+      border-radius: 1vmin;
+      z-index: 2;
+    }
+    
+    .little-card {
+      width: 12vmin;
+      height: 12vmin;
+      border-radius: 2vmin;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* cards */
+    
+    .big-card:nth-child(2) {
+        background-image: url(imgs/jacks.png);
+        transform: translate(-35%, 8%) rotate(-16deg);
+    }
+    
+    .big-card:nth-child(4) {
+        background-image: url(imgs/kings.png);
+        transform: translate(-12.5%, 4%) rotate(-4deg);
+    }
+    
+    .big-card:nth-child(6) {
+        background-image: url(imgs/knights.png);
+        transform: translate(12.5%, 4%) rotate(4deg);
+    }
+    
+    .big-card:nth-child(8) {
+        background-image: url(imgs/queens.png);
+        transform: translate(35%, 8%) rotate(16deg);
+    }
+    
+    /* chips */
+    
+    .little-card:nth-child(1) {
+      background-image: url(imgs/poker-chip.svg);
+    }
+    
+    .little-card:nth-child(3) {
+      background-image: url(imgs/chip.png);
+    }
+    
+    .little-card:nth-child(5) {
+      background-image: url(imgs/token.png);
+    }
+    
+    .little-card:nth-child(7) {
+      background-image: url(imgs/poker-token.svg);
+    }
+    
+    /* cards move */
+    
+    .card-group:hover > .big-card:nth-child(2) {
+      transform: translate(-75%, 16%) rotate(-24deg);
+    }
+    
+    .card-group:hover > .big-card:nth-child(4) {
+      transform: translate(-25%, 8%) rotate(-8deg);
+    }
+    
+    .card-group:hover > .big-card:nth-child(6) {
+      transform: translate(25%, 8%) rotate(8deg);
+    }
+    
+    .card-group:hover > .big-card:nth-child(8) {
+      transform: translate(75%, 16%) rotate(24deg);
+    }
+    
+    /* chips move */
+    
+    .card-group:hover > .little-card:nth-child(1) {
+        transform: translate(190%, -210%) rotate(-15deg);
+    }
+    
+    .card-group:hover > .little-card:nth-child(3) {
+        transform: translate(240%, 220%) rotate(15deg);
+    }
+    
+    .card-group:hover > .little-card:nth-child(5) {
+        transform: translate(-300%, -220%) rotate(15deg);
+    }
+    
+    .card-group:hover > .little-card:nth-child(7) {
+        transform: translate(-350%, 210%) rotate(-15deg);
+    }
+    
+    </style>
+
+    <!-- nav -->
+      
+    <div class="back">
+        <a href="skills.html"><i class="fa-solid fa-arrow-left fa-lg" style="color: #00ffff;"></i></a>
+    </div>
+
+    <div class="next">
+        <a href="contact.html"><i class="fa-solid fa-arrow-right fa-lg" style="color: #00ffff;"></i></a>
+    </div>
+
+</body>
+</html>
